@@ -9,7 +9,7 @@ class App extends React.Component {
     return ( 
       <div className='main'>
         <Animation />
-        <div className='content'>
+        <div className='content position-absolute pt-4'>
           <h1 className='text-center'>ROSIE WATSON</h1>
         </div>
         <Navbar />
