@@ -3,14 +3,16 @@ import '../styles/styles'
 
 import Animation from './components/Animation'
 import Navbar from './components/Navbar'
+import Picture from '../assets/web_summit.jpg'
 
 class App extends React.Component {
   render() {
     return ( 
       <div className='main'>
         <Animation />
-        <div className='content position-absolute pt-4'>
+        <div className='content position-absolute pt-3'>
           <h1 className='text-center'>ROSIE WATSON</h1>
+          <img src={Picture} className='d-block ml-auto mr-auto' />
         </div>
         <Navbar />
       </div>
