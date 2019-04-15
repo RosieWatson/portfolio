@@ -9,7 +9,7 @@ class App extends React.Component {
     return ( 
       <div className='main'>
         <Animation />
-        <div className='content position-absolute pt-3'>
+        < div className = 'content position-absolute pt-3 ml-3 ml-md-0' >
           <h1 className='text-center'>ROSIE WATSON</h1>
           <img src={Picture} className='d-block ml-auto mr-auto' />
           <h2 className='h3 text-white text-center p-2 m-3 block-xs'>Full-stack Web Developer</h2>
