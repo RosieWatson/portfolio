@@ -1,5 +1,5 @@
 @import 'animations';
-@primary: #EFCB68;
+@primary: rgb(128, 0, 0);
 
 body {
   font-family: sans-serif;
@@ -8,13 +8,17 @@ body {
 }
 
 h1 {
-  color: @primary;
+  color: white;
   font-weight: bolder;
   letter-spacing: 1rem;
-  text-shadow: 1px 1px 1px white;
-  @media (min-width: 600px) {
-    font-size: 5rem;
-  }
+  text-shadow: 6px 6px 0px @primary;
+}
+
+h2 {
+  color: white;
+  font-weight: bolder;
+  letter-spacing: 0.1rem;
+  text-shadow: 2px 2px 0px @primary;
 }
 
 .main {
@@ -40,7 +44,7 @@ h1 {
   height: 100%;
   position: fixed;
   background-color: @primary;
-  width: 2%;
+  padding: 1%
 }
 
 img {
@@ -49,4 +53,10 @@ img {
     max-width: 100%;
     height: auto;
   }
+}
+
+.social-link {
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 15px;
 }
