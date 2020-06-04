@@ -6,7 +6,11 @@ export default {
     data: [
       {
         title: 'University of Kent',
-        details: 'Got myself a first'
+        details: [
+          'BSc (hons) Computer Science',
+          'First Class',
+          'September 2015 - June 2019'
+        ]
       }
     ]
   },
@@ -17,17 +21,21 @@ export default {
     data: [
       {
         title: 'Holiday Extras',
-        details: 'So much time'
+        details: [
+          'July 2017 - Present',
+          'Software Engineer',
+        ]
       },
       {
         title: 'Apart of Me',
-        details: 'Volunteering pro'
+        details: [
+          'April 2020 - Present',
+          'Web Developer (volunteer)',
+        ]
       }
     ]
   },
-  projects: {
-
-  },
+  projects: {},
   skills: {
     id: 'skills',
     icon: 'fa-user-astronaut',
@@ -35,11 +43,21 @@ export default {
     data: [
       {
         title: 'Languages',
-        details: 'JavaScript, HTML, CSS'
+        details: [
+          'JavaScript, HTML, CSS'
+        ]
       },
       {
-        title: 'Other technologies',
-        details: 'React, Redux, etc'
+        title: 'Technologies and Frameworks',
+        details: [
+          'React, Redux, LESS, Node.JS, Enzyme, Bootstrap'
+        ]
+      },
+      {
+        title: 'Other',
+        details: [
+          'Git, Jira, Agile, CI/CD, CLI'
+        ]
       }
     ]
   }

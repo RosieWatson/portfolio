@@ -6,18 +6,21 @@ const Card = ({ cardId }) => {
   const { data, icon, title } = sellingPoints[cardId]
 
   return (
-    <div className='card mr-2' style={{width: '18rem'}}>
+    <div className='card mr-2'>
       <div className='card-img-top text-center py-3'>
         <i className={`fas ${icon} fa-4x card-icon`}></i>
       </div>
-      <h4 className='card-title text-center py-2'>{title}</h4>
+      <h4 className='card-title text-center py-2 mb-0'>{title}</h4>
       <div className='card-body'>
-        {data.map(dataPoint => {
+        {data.map((dataPoint, index) => {
           return (
-            <div className='card-text' key={dataPoint.title}>
-              <p className='font-weight-bold'>{dataPoint.title}</p>
-              <p>{dataPoint.details}</p>
-            </div>
+            <>
+              { index!==0 && <hr /> }
+              <div className='card-text' key={dataPoint.title}>
+                <h5 className='details-title font-weight-bold'>{dataPoint.title}</h5>
+                {dataPoint.details.map(detail => <p>{detail}</p>)}
+              </div>
+            </>
           )
         })}
       </div>

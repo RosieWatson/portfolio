@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/styles'
+import '../styles/all'
 
 import Animation from './components/Animation'
 import ArrowButton from './components/ArrowButton'
