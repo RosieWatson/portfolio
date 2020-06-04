@@ -33,7 +33,12 @@ class App extends React.Component {
               <h1 className='mb-3'>ROSIE WATSON</h1>
               <h4>Front-End Developer</h4>
             </div>
-            <button onClick={() => this.handleOnClick('experienceDiv')}><h1><i className='fas fa-arrow-circle-right'></i></h1></button>
+            <button
+              aria-label='Go to experience'
+              onClick={() => this.handleOnClick('experienceDiv')}
+            >
+              <h1><i className='fas fa-arrow-circle-right'></i></h1>
+            </button>
           </div>
         </section>
         <section ref={this.experienceDiv}>
@@ -43,6 +48,7 @@ class App extends React.Component {
               <Card cardId={'experience'} />
             </div>
             <button
+              aria-label='Go to Education'
               className='pr-3'
               onClick={() => this.handleOnClick('educationDiv')}
             >
