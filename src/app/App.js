@@ -37,16 +37,21 @@ class App extends React.Component {
           </div>
         </section>
         <section ref={this.experienceDiv}>
-        <div className='main p-4'>
+        <div className='main'>
             <Animation />
-            <div className='d-flex pl-1 pl-md-5 m-4 w-100 justify-content-center'>
+            <div className='d-flex pl-3 pl-md-5 ml-4 w-100 justify-content-center'>
               <Card cardId={'experience'} />
             </div>
-            <button onClick={() => this.handleOnClick('educationDiv')}><h1><i className='fas fa-arrow-circle-right'></i></h1></button>
+            <button
+              className='pr-3'
+              onClick={() => this.handleOnClick('educationDiv')}
+            >
+              <h1><i className='fas fa-arrow-circle-right'></i></h1>
+            </button>
           </div>
         </section>
         <section ref={this.educationDiv}>
-          <div className='main p-4'>
+          <div className='main'>
             <Animation />
             <div className='d-flex pl-1 pl-md-5 m-4 w-100 justify-content-center'>
               <Card cardId={'education'} />
