@@ -2,13 +2,6 @@
 @import 'animations';
 @import 'generic';
 
-body, html, #root {
-  font-family: sans-serif;
-  overflow: hidden;
-  height: 100%;
-  overflow-y: hidden;
-}
-
 .slide-container {
   scroll-snap-type: x mandatory;  
   display: flex;
@@ -23,16 +16,20 @@ section {
   position: relative;
 }
 
-section:nth-child(1) {
+section:nth-child(odd) {
   background-color: @secondary;
+
+  .card > .card-title {
+    background-color: @secondary-lighter;
+  }
 }
 
-section:nth-child(2) {
-  background-color: #5f5f5f;
-}
+section:nth-child(even) {
+  background-color: @secondary-lighter;
 
-section:nth-child(3) {
-  background-color: @secondary;
+  .card > .card-title {
+    background-color: @secondary;
+  }
 }
 
 .main {
@@ -45,16 +42,34 @@ section:nth-child(3) {
   height: 100%;
 }
 
-.navbar {
-  left:0;
-  height: 100%;
-  position: fixed;
-  background-color: @primary;
-  padding: 1%
-}
-
 .social-link {
   position: fixed;
   bottom: 0;
   padding-bottom: 15px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.card {
+  width: 18rem;
+  border: none;
+
+  .card-icon {
+    color: @primary;
+  }
+
+  .card-text {
+    .details-title {
+      color: @primary;
+      margin-bottom: 5px;
+    }
+
+    p {
+      margin-bottom: 0px;
+    }
+  }
 }

@@ -11,7 +11,7 @@ export default class Animation extends React.Component {
       elements.push(<Ellipse key={'ellipse' + count}/>)
       count--
     }
-    return <g id='shapes-behind'>{elements}</g>
+    return <g className='shapes-behind'>{elements}</g>
   }
 
   createFrontLayer = () => {
@@ -21,7 +21,7 @@ export default class Animation extends React.Component {
       elements.push(<Circle key={'circle' + count}/>)
       count--
     }
-    return <g id='shapes-front'>{elements}</g>
+    return <g className='shapes-front'>{elements}</g>
   }
 
   render() {
