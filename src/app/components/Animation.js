@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Elipse from './Elipse'
+import Ellipse from './Ellipse'
 import Circle from './Circle'
 
 export default class Animation extends React.Component {
@@ -8,7 +8,7 @@ export default class Animation extends React.Component {
     let elements = []
     let count = 15
     while(count > 0) {
-      elements.push(<Elipse key={'elipse' + count}/>)
+      elements.push(<Ellipse key={'ellipse' + count}/>)
       count--
     }
     return <g id='shapes-behind'>{elements}</g>
@@ -26,7 +26,7 @@ export default class Animation extends React.Component {
 
   render() {
     return (
-      <div className='background w-100 h-100'>
+      <div className='background'>
         <svg viewBox='0 0 1024 1536' preserveAspectRatio='xMidYMax slice' className='w-100 h-100 position-absolute'>
           <g fill='#E1EFE6' fillOpacity='0.1' transform='translate(55 42)'>
             {this.createBackLayer()}

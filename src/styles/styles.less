@@ -1,28 +1,37 @@
+@import 'theme';
 @import 'animations';
-@primary: rgb(128, 0, 0);
+@import 'generic';
 
 body, html, #root {
   font-family: sans-serif;
   overflow: hidden;
   height: 100%;
+  overflow-y: hidden;
 }
 
-h1 {
-  color: white;
-  font-weight: bolder;
-  letter-spacing: 1rem;
-  text-shadow: 6px 6px 0px @primary;
+.slide-container {
+  scroll-snap-type: x mandatory;  
+  display: flex;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
 }
 
-h2 {
-  color: white;
-  font-weight: bolder;
-  letter-spacing: 0.1rem;
-  text-shadow: 2px 2px 0px @primary;
+section {
+  min-width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+section:nth-child(1) {
+  background-color: @secondary;
+}
+
+section:nth-child(2) {
+  background-color: #5f5f5f;
 }
 
 .main {
-  background-color: rgb(56, 56, 56);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -31,28 +40,12 @@ h2 {
   height: 100%;
 }
 
-.background {
-  position: absolute;
-  min-width: 100vw;
-  min-height: 100vh;
-  top: 0;
-  left: 0;
-}
-
 .navbar {
   left:0;
   height: 100%;
   position: fixed;
   background-color: @primary;
   padding: 1%
-}
-
-img {
-  height:65%;
-  @media (max-width: 900px) {
-    max-width: 100%;
-    height: auto;
-  }
 }
 
 .social-link {
