@@ -2,20 +2,58 @@ import React from 'react'
 import '../styles/styles'
 
 import Animation from './components/Animation'
+import Card from './components/Card'
 import Github from './components/Github'
 
 class App extends React.Component {
+  constructor(props){
+    super(props)
+
+    this.experienceDiv = React.createRef()
+    this.educationDiv = React.createRef()
+ }
+
+  handleOnClick = (div) => {
+    if(this[div].current){
+      this[div].current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest'
+      })
+    }
+  }
+
+
   render() {
-    return ( 
-      <div className='main display-flex align-items-center'>
-        <Animation />
-        <div className='pl-1 pl-md-5 m-5 w-100'>
-          <h1>ROSIE WATSON</h1>
-          <h2>Front-End Developer</h2>
-          <h2>JavaScript Lover</h2>
-          <Github />
-        </div>
-        <div className='navbar'></div>
+    return (
+      <div className='slide-container'>
+        <section>
+          <div className='main'>
+            <Animation />
+            <div className='pl-1 pl-md-5 m-4 w-100'>
+              <h1 className='mb-3'>ROSIE WATSON</h1>
+              <h4>Front-End Developer</h4>
+            </div>
+            <button onClick={() => this.handleOnClick('experienceDiv')}><h1><i className='fas fa-arrow-circle-right'></i></h1></button>
+          </div>
+        </section>
+        <section ref={this.experienceDiv}>
+        <div className='main p-4'>
+            <Animation />
+            <div className='d-flex pl-1 pl-md-5 m-4 w-100 justify-content-center'>
+              <Card cardId={'experience'} />
+            </div>
+            <button onClick={() => this.handleOnClick('educationDiv')}><h1><i className='fas fa-arrow-circle-right'></i></h1></button>
+          </div>
+        </section>
+        <section ref={this.educationDiv}>
+          <div className='main p-4'>
+            <Animation />
+            <div className='d-flex pl-1 pl-md-5 m-4 w-100 justify-content-center'>
+              <Card cardId={'education'} />
+            </div>
+          </div>
+        </section>
+        <Github />
       </div>
     )
   }
