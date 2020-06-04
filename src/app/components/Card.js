@@ -7,15 +7,15 @@ const Card = ({ cardId }) => {
 
   return (
     <div className='card mr-2' style={{width: '18rem'}}>
-      <div className='card-img-top text-center pt-3'>
-        <i className={`fas ${icon} fa-4x`}></i>
+      <div className='card-img-top text-center py-3'>
+        <i className={`fas ${icon} fa-4x card-icon`}></i>
       </div>
+      <h4 className='card-title text-center py-2'>{title}</h4>
       <div className='card-body'>
-        <h5 className='card-title'>{title}</h5>
         {data.map(dataPoint => {
           return (
             <div className='card-text' key={dataPoint.title}>
-              <p>{dataPoint.title}</p>
+              <p className='font-weight-bold'>{dataPoint.title}</p>
               <p>{dataPoint.details}</p>
             </div>
           )

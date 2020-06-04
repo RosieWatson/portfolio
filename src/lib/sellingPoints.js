@@ -12,7 +12,7 @@ export default {
   },
   experience: {
     id: 'experience',
-    icon: 'fa-user-graduate',
+    icon: 'fa-user-tie',
     title: 'Experience',
     data: [
       {
@@ -30,7 +30,7 @@ export default {
   },
   skills: {
     id: 'skills',
-    icon: 'fa-user-graduate',
+    icon: 'fa-user-astronaut',
     title: 'Skills',
     data: [
       {

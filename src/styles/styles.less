@@ -23,16 +23,20 @@ section {
   position: relative;
 }
 
-section:nth-child(1) {
+section:nth-child(odd) {
   background-color: @secondary;
+
+  .card-title {
+    background-color: #5f5f5f;
+  }
 }
 
-section:nth-child(2) {
+section:nth-child(even) {
   background-color: #5f5f5f;
-}
 
-section:nth-child(3) {
-  background-color: @secondary;
+  .card-title {
+    background-color: @secondary;
+  }
 }
 
 .main {
@@ -57,4 +61,18 @@ section:nth-child(3) {
   position: fixed;
   bottom: 0;
   padding-bottom: 15px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.card {
+  border: none;
+
+  .card-icon {
+    color: @primary;
+  }
 }
