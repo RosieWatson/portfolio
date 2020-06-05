@@ -20,8 +20,7 @@ class App extends React.Component {
   handleClick = (div) => {
     if(this[div].current){
       this[div].current.scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest'
+        behavior: 'smooth'
       })
     }
   }
