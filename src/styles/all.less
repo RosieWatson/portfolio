@@ -1,5 +1,4 @@
 @import 'theme';
-@import 'animations';
 @import 'generic';
 
 .slide-container {
@@ -17,7 +16,8 @@ section {
 }
 
 section:nth-child(odd) {
-  background-color: @secondary;
+  background-image: radial-gradient(@secondary-lighter 10%, @secondary 10%);
+  background-size: 8px 8px;
 
   .card > .card-title {
     background-color: @secondary-lighter;
@@ -25,7 +25,8 @@ section:nth-child(odd) {
 }
 
 section:nth-child(even) {
-  background-color: @secondary-lighter;
+  background-image: radial-gradient(@secondary 10%, @secondary-lighter 10%);
+  background-size: 8px 8px;
 
   .card > .card-title {
     background-color: @secondary;
