@@ -31,7 +31,7 @@ class App extends React.Component {
       <div className='slide-container'>
         <section>
           <div className='main'>
-            <Animation />
+            {/* <Animation /> */}
             <div className='pl-1 pl-md-5 m-4 w-100'>
               <h1 className='mb-3'>ROSIE WATSON</h1>
               <h4>Front-End Developer</h4>
@@ -41,7 +41,7 @@ class App extends React.Component {
         </section>
         <section ref={this.experienceDiv}>
           <div className='main'>
-            <Animation />
+            {/* <Animation /> */}
             <div className='card-container pl-3 pl-md-5 ml-4'>
               <Card cardId={'experience'} />
             </div>
@@ -50,7 +50,7 @@ class App extends React.Component {
         </section>
         <section ref={this.educationDiv}>
           <div className='main'>
-            <Animation />
+            {/* <Animation /> */}
             <div className='card-container pl-3 pl-md-5 ml-4'>
               <Card cardId={'education'} />
             </div>
@@ -59,7 +59,7 @@ class App extends React.Component {
         </section>
         <section ref={this.skillsDiv}>
           <div className='main'>
-            <Animation />
+            {/* <Animation /> */}
             <div className='card-container pl-1 pl-md-5 m-4'>
               <Card cardId={'skills'} />
             </div>
