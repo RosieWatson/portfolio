@@ -13,7 +13,7 @@ const Card = ({ cardId }) => {
       <h4 className='card-title text-center py-2 mb-0'>{title}</h4>
       <div className='card-body'>
         {data.map((dataPoint, index) => {
-          const { details, title, titleLink } = dataPoint
+          const { date, details, title, titleLink } = dataPoint
           return (
             <>
               { index!==0 && <hr /> }
@@ -25,6 +25,7 @@ const Card = ({ cardId }) => {
                     title
                 }
                 </h5>
+                { date && <i>{date}</i>}
                 {details.map(detail => <p>{detail}</p>)}
               </div>
             </>
