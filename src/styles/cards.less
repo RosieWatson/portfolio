@@ -1,0 +1,35 @@
+.card {
+  width: 18rem;
+  border: none;
+
+  .card-icon {
+    color: @primary;
+  }
+
+  .card-text {
+    .details-title {
+      color: @primary;
+      margin-bottom: 5px;
+    }
+
+    p {
+      margin-bottom: 0px;
+    }
+
+    a {
+      color: @primary;
+    }
+  }
+}
+
+section:nth-child(odd) {
+  .card > .card-title {
+    background-color: @secondary-lighter;
+  }
+}
+
+section:nth-child(even) {
+  .card > .card-title {
+    background-color: @secondary;
+  }
+}
