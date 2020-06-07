@@ -15,9 +15,9 @@ const Card = ({ cardId }) => {
         {data.map((dataPoint, index) => {
           const { date, details, title, titleLink } = dataPoint
           return (
-            <>
+            <React.Fragment key={title}>
               { index!==0 && <hr /> }
-              <div className='card-text' key={title}>
+              <div className='card-text'>
                 <h5 className='details-title font-weight-bold'>
                 {
                   titleLink ?
@@ -26,9 +26,9 @@ const Card = ({ cardId }) => {
                 }
                 </h5>
                 { date && <i>{date}</i>}
-                {details.map(detail => <p>{detail}</p>)}
+                {details.map((detail, key) => <p key={key}>{detail}</p>)}
               </div>
-            </>
+            </React.Fragment>
           )
         })}
       </div>
