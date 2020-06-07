@@ -35,7 +35,34 @@ export default {
       }
     ]
   },
-  projects: {},
+  projects: {
+    id: 'projects',
+    icon: 'fa-book-reader',
+    title: 'Projects',
+    data: [
+      {
+        title: 'Esports Guide',
+        details: [
+          'App development',
+          'Written in React Native and released to Google Play Store',
+          'link?'
+        ]
+      },
+      {
+        title: 'Space Dashboard',
+        details: [
+          'Dashboard of space facts and latest news',
+          'React, Redux, Webpack and working with APIs'
+        ]
+      },
+      {
+        title: 'Social Media Marketing',
+        details: [
+          'Running social media campaigns for a small app business'
+        ]
+      }
+    ]
+  },
   skills: {
     id: 'skills',
     icon: 'fa-user-astronaut',

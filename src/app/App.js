@@ -13,6 +13,7 @@ class App extends React.Component {
 
     this.experienceDiv = React.createRef()
     this.educationDiv = React.createRef()
+    this.projectsDiv = React.createRef()
     this.skillsDiv = React.createRef()
  }
 
@@ -55,8 +56,16 @@ class App extends React.Component {
         </section>
         <section ref={this.skillsDiv}>
           <div className='main'>
-            <div className='card-container pl-1 pl-md-5 m-4'>
+            <div className='card-container pl-3 pl-md-5 ml-4'>
               <Card cardId={'skills'} />
+            </div>
+            <ArrowButton page={'projects'} classes='pr-3' handleClick={this.handleClick}/>
+          </div>
+        </section>
+        <section ref={this.projectsDiv}>
+          <div className='main'>
+            <div className='card-container pl-1 pl-md-5 m-4'>
+              <Card cardId={'projects'} />
             </div>
           </div>
         </section>
