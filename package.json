@@ -21,8 +21,8 @@
   },
   "homepage": "https://github.com/RosieWatson/portfolio#readme",
   "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
