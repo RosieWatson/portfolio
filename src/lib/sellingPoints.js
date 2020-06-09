@@ -53,7 +53,7 @@ export default {
       },
       {
         title: 'Space Dashboard',
-        titleLink: 'https://github.com/RosieWatson/space-site', // This will be made public when ready
+        titleLink: 'https://github.com/RosieWatson/space-dashboard',
         date: null,
         details: [
           'Dashboard of space facts and latest news using React, Redux, Webpack and working with APIs'
@@ -87,7 +87,7 @@ export default {
         titleLink: null,
         date: null,
         details: [
-          'React, Redux, LESS, Node.JS, Enzyme, Bootstrap, Firebase'
+          'React, Redux, LESS, Node.JS, Enzyme, Bootstrap, Firebase, Handlebars, Jekyll'
         ]
       },
       {

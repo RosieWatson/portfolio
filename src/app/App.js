@@ -32,7 +32,9 @@ class App extends React.Component {
         <section>
           <div className='main'>
             <div className='pl-1 pl-md-5 m-4 w-100'>
-              <h1 className='mb-3'>ROSIE WATSON</h1>
+              <a href='mailto:rosiewatson@me.com' target='_blank' rel='noopener'>
+                <h1 className='mb-3'>ROSIE WATSON<i className='fas fa-envelope fa-xs' /></h1>
+              </a>
               <h4>Front-End Developer</h4>
             </div>
             <ArrowButton page={'experience'} handleClick={this.handleClick}/>
