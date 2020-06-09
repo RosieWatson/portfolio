@@ -59,14 +59,14 @@ export default {
           'Dashboard of space facts and latest news using React, Redux, Webpack and working with APIs'
         ]
       },
-      {
-        title: 'Social Media Marketing',
-        titleLink: 'https://www.startfitness.life/',
-        date: null,
-        details: [
-          'Running social media campaigns for a small app business to interact with the audience and gain traction with brand recognition'
-        ]
-      }
+      // {
+      //   title: 'Social Media Marketing',
+      //   titleLink: 'https://www.startfitness.life/',
+      //   date: null,
+      //   details: [
+      //     'Running social media campaigns for a small app business to interact with the audience and gain traction with brand recognition'
+      //   ]
+      // }
     ]
   },
   skills: {
