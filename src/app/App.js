@@ -35,7 +35,7 @@ class App extends React.Component {
               <a href='mailto:rosiewatson@me.com' target='_blank' rel='noopener'>
                 <h1 className='mb-3'>ROSIE WATSON<i className='fas fa-envelope fa-xs' /></h1>
               </a>
-              <h4>Front-End Developer</h4>
+              <h4>Full Stack Developer</h4>
             </div>
             <ArrowButton page={'experience'} handleClick={this.handleClick}/>
           </div>
