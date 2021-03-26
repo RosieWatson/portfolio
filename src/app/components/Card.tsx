@@ -2,6 +2,10 @@ import React from 'react'
 
 import sellingPoints from '../../lib/sellingPoints'
 
+interface CardProps {
+  cardId: string
+}
+
 const Card = ({ cardId }) => {
   const { data, icon, title } = sellingPoints[cardId]
 
@@ -16,17 +20,21 @@ const Card = ({ cardId }) => {
           const { date, details, title, titleLink } = dataPoint
           return (
             <React.Fragment key={title}>
-              { index!==0 && <hr /> }
+              {index !== 0 && <hr />}
               <div className='card-text'>
                 <h5 className='details-title font-weight-bold'>
-                {
-                  titleLink ?
-                    <a href={titleLink} target='_blank' rel='noopener'>{title}</a> :
+                  {titleLink ? (
+                    <a href={titleLink} target='_blank' rel='noopener'>
+                      {title}
+                    </a>
+                  ) : (
                     title
-                }
+                  )}
                 </h5>
-                { date && <i>{date}</i>}
-                {details.map((detail, key) => <p key={key}>{detail}</p>)}
+                {date && <i>{date}</i>}
+                {details.map((detail, key) => (
+                  <p key={key}>{detail}</p>
+                ))}
               </div>
             </React.Fragment>
           )
