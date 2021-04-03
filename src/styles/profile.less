@@ -1,0 +1,23 @@
+.wavey-background {
+  background: linear-gradient(red, transparent),
+    linear-gradient(to top left, lime, transparent),
+    linear-gradient(to top right, blue, transparent);
+  background-blend-mode: screen;
+}
+
+.sideBar {
+  .wavey-background;
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .sideBar {
+    width: 100%;
+  }
+}

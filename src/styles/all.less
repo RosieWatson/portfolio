@@ -1,9 +1,10 @@
 @import 'theme';
 @import 'generic';
 @import 'cards';
+@import 'profile';
 
 .slide-container {
-  scroll-snap-type: x mandatory;  
+  scroll-snap-type: x mandatory;
   display: flex;
   -webkit-overflow-scrolling: touch;
   overflow-x: scroll;
@@ -46,6 +47,13 @@ section:nth-child(even) {
 }
 
 .social-link {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding-bottom: 15px;
+}
+
+.hide-button {
   position: fixed;
   bottom: 0;
   padding-bottom: 15px;
