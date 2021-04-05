@@ -11,7 +11,7 @@ h1 {
   color: @secondary;
   font-weight: bolder;
   letter-spacing: 0.5rem;
-  text-shadow: 4px 4px 0px @primary;
+  text-shadow: 3px 3px 0px @primary;
   font-size: 2.3rem;
 }
 
@@ -19,7 +19,7 @@ h4 {
   color: @secondary;
   font-weight: bolder;
   letter-spacing: 0.1rem;
-  text-shadow: 3px 3px 0px @primary;
+  text-shadow: 2px 2px 0px @primary;
 }
 
 button {
@@ -45,4 +45,11 @@ a:hover {
     border-color: @primary;
     color: @primary;
   }
+}
+
+.wavey-background {
+  background: linear-gradient(red, transparent),
+    linear-gradient(to top left, lime, transparent),
+    linear-gradient(to top right, blue, transparent);
+  background-blend-mode: screen;
 }

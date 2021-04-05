@@ -6,7 +6,7 @@ interface CardProps {
   cardId: string
 }
 
-const Card = ({ cardId }) => {
+const Card = ({ cardId }: CardProps) => {
   const { data, icon, title } = sellingPoints[cardId]
 
   return (
@@ -14,7 +14,9 @@ const Card = ({ cardId }) => {
       <div className='card-img-top text-center py-3'>
         <i className={`fas ${icon} fa-4x card-icon`}></i>
       </div>
-      <h4 className='card-title text-center py-2 mb-0'>{title}</h4>
+      <div className='card-title'>
+        <h4 className='text-center py-2 mb-0'>{title}</h4>
+      </div>
       <div className='card-body'>
         {data.map((dataPoint, index) => {
           const { date, details, title, titleLink } = dataPoint
