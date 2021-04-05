@@ -1,6 +1,8 @@
 .card {
   width: 18rem;
   border: none;
+  -webkit-box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.5);
 
   .card-icon {
     color: @primary;
@@ -24,12 +26,12 @@
 
 section:nth-child(odd) {
   .card > .card-title {
-    background-color: @secondary-lighter;
+    .wavey-background;
   }
 }
 
 section:nth-child(even) {
   .card > .card-title {
-    background-color: @secondary;
+    .wavey-background;
   }
 }
