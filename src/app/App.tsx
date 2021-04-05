@@ -6,6 +6,8 @@ import Card from './components/Card'
 import Github from './components/Github'
 import ProfileSideBar from './components/ProfileSideBar'
 
+import ExperiencePage from './ExperiencePage'
+
 const App = () => {
   const [showSideBar, setShowSideBar] = useState(true)
 
@@ -28,8 +30,14 @@ const App = () => {
       <div className='slide-container'>
         <section ref={experienceDiv}>
           <div className='main'>
-            <div className='card-container pl-3 pl-md-5 ml-4'>
-              <Card cardId='experience' />
+            <div
+              className={
+                showSideBar
+                  ? 'info-side-container shorter-container'
+                  : 'info-side-container'
+              }
+            >
+              <ExperiencePage />
             </div>
             <ArrowButton
               page='education'
@@ -72,10 +80,10 @@ const App = () => {
         <Github />
         {!showSideBar && (
           <button
-            className='btn btn-primary hide-button ml-3 mb-3'
+            className='btn btn-primary hide-button ml-2'
             onClick={() => setShowSideBar(true)}
           >
-            Show your face again
+            Show my face again
           </button>
         )}
       </div>

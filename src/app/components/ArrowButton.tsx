@@ -12,9 +12,9 @@ const ArrowButton = ({ handleClick, page, classes }: ArrowButtonProps) => (
     onClick={handleClick}
     className={classes}
   >
-    <h1>
+    <h2>
       <i className='fas fa-arrow-circle-right'></i>
-    </h1>
+    </h2>
   </button>
 )
 
