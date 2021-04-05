@@ -1,4 +1,5 @@
 import React from 'react'
+import { isMobile } from 'react-device-detect'
 
 import sellingPoints from '../lib/sellingPoints'
 
@@ -9,7 +10,7 @@ const ExperiencePage = () => (
 
       return (
         <div className='experience-section' key={title}>
-          <img className='experience-image' src={image} />
+          {!isMobile && <img className='experience-image' src={image} />}
           <div className='experience-details'>
             <a
               className='h4 experience-title'

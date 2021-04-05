@@ -30,7 +30,7 @@ const App = () => {
       <div className='slide-container'>
         <section ref={experienceDiv}>
           <div className='main'>
-            <div
+            {/* <div
               className={
                 showSideBar
                   ? 'info-side-container shorter-container'
@@ -38,6 +38,9 @@ const App = () => {
               }
             >
               <ExperiencePage />
+            </div> */}
+            <div className='card-container pl-3 pl-md-5 ml-4'>
+              <Card cardId='experience' />
             </div>
             <ArrowButton
               page='education'
