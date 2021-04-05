@@ -14,7 +14,7 @@ const App = () => {
   const projectsDiv = useRef(null)
   const skillsDiv = useRef(null)
 
-  const handleClick = (divRef) => {
+  const handleSlideChange = (divRef) => {
     if (divRef.current) {
       divRef.current.scrollIntoView({
         behavior: 'smooth',
@@ -24,7 +24,6 @@ const App = () => {
 
   return (
     <>
-      {/* Better animation */}
       {showSideBar && <ProfileSideBar setShowSideBar={setShowSideBar} />}
       <div className='slide-container'>
         <section ref={experienceDiv}>
@@ -35,7 +34,7 @@ const App = () => {
             <ArrowButton
               page='education'
               classes='pr-3'
-              handleClick={() => handleClick(educationDiv)}
+              handleClick={() => handleSlideChange(educationDiv)}
             />
           </div>
         </section>
@@ -47,7 +46,7 @@ const App = () => {
             <ArrowButton
               page='skills'
               classes='pr-3'
-              handleClick={() => handleClick(skillsDiv)}
+              handleClick={() => handleSlideChange(skillsDiv)}
             />
           </div>
         </section>
@@ -59,7 +58,7 @@ const App = () => {
             <ArrowButton
               page='projects'
               classes='pr-3'
-              handleClick={() => handleClick(projectsDiv)}
+              handleClick={() => handleSlideChange(projectsDiv)}
             />
           </div>
         </section>
@@ -73,10 +72,10 @@ const App = () => {
         <Github />
         {!showSideBar && (
           <button
-            className='hide-button ml-3'
+            className='btn btn-primary hide-button ml-3 mb-3'
             onClick={() => setShowSideBar(true)}
           >
-            Show me
+            Show your face again
           </button>
         )}
       </div>

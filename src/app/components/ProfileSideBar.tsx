@@ -10,19 +10,15 @@ const ProfileSideBar = ({ setShowSideBar }: ProfileSideBarProps) => (
       <div>
         <img
           src={require('../../assets/profile.png')}
-          className='profile-photo'
+          className='profile-photo mb-4'
         />
         <a href='mailto:rosiewatson@me.com' target='_blank' rel='noopener'>
-          <h1 className='mb-3'>
-            ROSIE WATSON
-            <i className='fas fa-envelope fa-xs' />
-          </h1>
+          <h1 className='mb-4'>ROSIE WATSON</h1>
         </a>
         <h4>Full Stack Developer</h4>
       </div>
       <button className='btn btn-primary' onClick={() => setShowSideBar(false)}>
-        Hide me
-        {/* Different text for mobile vs desktop? */}
+        Hide my face
       </button>
     </div>
   </div>
