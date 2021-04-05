@@ -1,11 +1,11 @@
 .wavey-background {
   background: linear-gradient(red, transparent),
-    linear-gradient(to top left, lime, transparent),
+    // linear-gradient(to top left, green, transparent),
     linear-gradient(to top right, blue, transparent);
   background-blend-mode: screen;
 }
 
-.sideBar {
+.side-bar {
   .wavey-background;
   height: 100%;
   width: 300px;
@@ -14,10 +14,32 @@
   top: 0;
   left: 0;
   overflow-x: hidden;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 768px) {
-  .sideBar {
+  .side-bar-container {
+    background-color: @secondary;
+    height: 100%;
     width: 100%;
   }
+
+  .side-bar {
+    width: 100%;
+  }
+}
+
+.profile-photo {
+  height: 150px;
+  width: 150px;
+  border-radius: 1000px;
+  border: 5px solid @secondary;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.5);
 }
