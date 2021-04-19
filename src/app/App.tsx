@@ -83,7 +83,7 @@ const App = () => {
         <Github />
         {!showSideBar && (
           <button
-            className='btn btn-primary hide-button ml-2'
+            className='btn btn-primary hide-button ml-2 mb-3'
             onClick={() => setShowSideBar(true)}
           >
             Show my face again
